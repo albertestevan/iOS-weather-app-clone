@@ -11,10 +11,9 @@ import Foundation
 public final class WeatherService: NSObject {
     
     private let locationManager = CLLocationManager()
-    private let API_KEY = "c7f1810d25f7f4704cc956b0335046ac"
+    private let API_KEY = ""     // private let API_KEY = "{YOUR_API_KEY_HERE}"
     private var completionHandler: ((Weather) -> Void)?
 
-    
     public override init() {
         super.init()
         locationManager.delegate = self
@@ -62,12 +61,6 @@ extension WeatherService: CLLocationManagerDelegate {
     }
 }
 
-//struct APIResponse: Decodable {
-//    let name: String
-//    let main: APIMain
-//    let weather: [APIWeather]
-//
-//}
 
 struct APIResponse: Decodable {
     let current: APICurrent
@@ -75,11 +68,6 @@ struct APIResponse: Decodable {
 
     let hourly: [APIHourly]
     let daily: [APIDaily]
-//    enum CodingKeys: Array, CodingKey {
-//        case current
-//        case name = "timezone"
-//    }
-    
 }
 
 struct APICurrent: Decodable {
@@ -116,18 +104,3 @@ struct APITemp: Decodable {
     let max: Double
     let min: Double
 }
-
-
-//struct APIMain: Decodable {
-//    let temp: Double
-//}
-//
-//struct APIWeather: Decodable {
-//    let description: String
-//    let iconName: String
-//
-//    enum CodingKeys: String, CodingKey {
-//        case description
-//        case iconName = "main"
-//    }
-//}
