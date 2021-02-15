@@ -1,2 +1,2 @@
 # iOS-weather-app-clone
-![alt text](https://github.com/[albertestevan/iOS-weather-app-clone/blob/master/image.png?raw=true)
+![alt text](https://github.com/albertestevan/iOS-weather-app-clone/blob/master/image.png)
